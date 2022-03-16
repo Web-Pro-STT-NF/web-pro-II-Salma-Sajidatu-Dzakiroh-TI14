@@ -66,6 +66,7 @@
                     </div>
                 </form>
                 <?php
+                    include_once 'libfungsi.php';
                     $proses = isset($_POST['proses']) ? $_POST['proses'] : '';
                     $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
                     $mata_kuliah = isset($_POST['matkul']) ? $_POST['matkul'] : '';
@@ -75,9 +76,18 @@
 
                     echo "Nama : $nama";
                     echo "<br/>Mata Kuliah : $mata_kuliah";
-                    echo "<br/>Nilai UTS :$nilai_uts";
-                    echo "<br/>Nilai UAS :$nilai_uas";
-                    echo "<br/>Nilai Tugas :$nilai_tugas";
+                    echo "<br/>Nilai UTS : $nilai_uts";
+                    echo "<br/>Nilai UAS : $nilai_uas";
+                    echo "<br/>Nilai Tugas : $nilai_tugas";
+                    echo "<br/> Nilai Akhir : ", persentase($nilai_uts, $nilai_uas, $nilai_tugas);
+
+                    $nilai_akhir = persentase($nilai_uts, $nilai_uas, $nilai_tugas);
+                    $grade_nilai = grade_nilai($nilai_akhir);
+
+                    echo "<br/>Nilai Akhir : $nilai_akhir";
+                    echo "<br/>Status : ", kelulusan($nilai_akhir);
+                    echo "<br/>Grade Nilai : ", $grade_nilai;
+                    echo "<br/>Predikat Nilia : ", predikat_nilai($grade_nilai);
                 ?>
             </div>
         </div>

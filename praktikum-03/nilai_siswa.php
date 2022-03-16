@@ -5,110 +5,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Nilai</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div class="card" style="height: 520px;">
+    <div class="card" style="height: 100%;">
+        <div class="card-header">
+            Sistem Penilaian
+        </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-md-8 bg-light">
-                    <h4>Belanja Online</h4>
-                    <hr>
-                    <div class="">
-                        <div class="col-md-6">
-                            <form method="POST" action="form_belanja.php" class="mt-3">
-                                <div class="form-group row">
-                                    <label for="staticEmail"
-                                        class="col-sm-4 col-form-label font-weight-bold text-right">Custemer</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" name="nama" class="form-control" placeholder="Nama Cutomer">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail"
-                                        class="col-sm-4 col-form-label font-weight-bold text-right">Pilih
-                                        Produk</label>
-                                    <div class="col-sm-8 mt-2">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="produk" id="inlineRadio1"
-                                                value="TV">
-                                            <label class="form-check-label" for="inlineRadio1">TV</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="produk" id="inlineRadio2"
-                                                value="KULKAS">
-                                            <label class="form-check-label" for="inlineRadio2">KULKAS</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="produk" id="inlineRadio2"
-                                                value="MESIN CUCI">
-                                            <label class="form-check-label" for="inlineRadio2">MESIN CUCI</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail"
-                                        class="col-sm-4 col-form-label font-weight-bold text-right">Jumlah</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" name="jumlah" class="form-control" placeholder="Jumlah">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail"
-                                        class="col-sm-4 col-form-label font-weight-bold text-right"></label>
-                                    <div class="col-sm-4">
-                                        <button type="submit" class="btn btn-success">Kirim</button>
-                                    </div>
-                                </div>
-                            </form>
+            <h4>Form Nilai Siswa</h4>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <div class="col-md-7">
+                    <form method="POST" action="nilai_siswa.php" class="mt-3">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold text-right">Nama
+                                Lengkap</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" style="width: 26.5rem;">
-                        <div class="card-header bg-primary text-white">
-                            Daftar Harga
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-4 col-form-label font-weight-bold text-right">Mata
+                                Kuliah</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="matkul" id="exampleFormControlSelect1">
+                                    <option value="DDP">Dasar Dasar Pemrograman</option>
+                                    <option value="BDI">Basis Data I</option>
+                                    <option value="WEB1">Pemrograman Web</option>
+                                </select>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">TV : 4.200.000</li>
-                            <li class="list-group-item">Kulkas : 3.100.000</li>
-                            <li class="list-group-item">MESIN CUCI : 3.800.000</li>
-                        </ul>
-                        <div class="card-footer bg-primary text-white">
-                            Harga Dapat Berubah Setiap Saat
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold text-right">Nilai
+                                UTS</label>
+                            <div class="col-sm-5">
+                                <input type="text" name="uts" class="form-control" placeholder="Nilai UTS">
+                            </div>
                         </div>
-                    </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold text-right">Nilai
+                                UAS</label>
+                            <div class="col-sm-5">
+                                <input type="text" name="uas" class="form-control" placeholder="Nilai UAS">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold text-right">Nilai
+                                Tugas/Praktikum</label>
+                            <div class="col-sm-5">
+                                <input type="text" name="tugas" class="form-control" placeholder="Nilai Tugas">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail"
+                                class="col-sm-4 col-form-label font-weight-bold text-right"></label>
+                            <div class="col-sm-5">
+                                <input type="submit" name="proses" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <?php
+          $proses = $_POST['proses'];
+          $nama_siswa = $_POST['nama'];
+          $mata_kuliah = $_POST['matkul'];
+          $nilai_uts = $_POST['uts'];
+          $nilai_uas = $_POST['uas'];
+          $nilai_tugas = $_POST['tugas'];
+
+           if(!empty($proses)) {
+             echo 'Proses : '.$proses;
+             echo '<br/>Nama : '.$nama_siswa;
+             echo '<br/>Mata Kuliah : '.$mata_kuliah;
+             echo '<br/>Nilai UTS : '.$nilai_uts;
+             echo '<br/>Nilai UAS : '.$nilai_uas;
+             echo '<br/>Nilai Tugas Praktikum : '.$nilai_tugas;
+            
+             $total = ($nilai_uts*30/100)+($nilai_uas*35/100)+($nilai_tugas*35/100);
+             echo '<br/>Total Nilai : '.$total;
+
+             if ($total >= 0 && $total <=35) {
+                echo '<br/>Grade : <span class="badge badge-primary">E</span>';
+            } else if ($total >= 36 && $total <= 55) {
+                echo '<br/>Grade : <span class="badge badge-primary">D</span>';
+            } else if ($total >= 56 && $total <= 69) {
+                echo '<br/>Grade : <span class="badge badge-primary">C</span>';
+            } else if ($total >= 70 && $total <= 84) {
+                echo '<br/>Grade : <span class="badge badge-primary">B</span>';
+            } else if ($total >= 85 && $total <= 100) {
+                echo '<br/>Grade : <span class="badge badge-primary">A</span>';
+            } else if ($total < 0 ) {
+                echo '<br/>Grade : <span class="badge badge-primary">I</span>';
+            } else if ($total > 100 ) {
+                echo '<br/>Grade : <span class="badge badge-primary">I</span>';
+            }
+            
+            if ($total >= 55) {
+                echo '<br/>Keterangan : <span class="badge badge-success">LULUS</span>';
+            } else {
+                echo '<br/>Keterangan : <span class="badge badge-danger">TIDAK LULUS</span>';
+            }
+            
+            }
+
+           
+            ?>
+        </div>
+        <div class="card-footer">
+            Develop By Salma Sajidatu Dzakiroh
         </div>
     </div>
-    <div class="m-2">
-        <?php
-            $proses = $_POST['proses'];
-            $nama_customer = $_POST['nama'];
-            $produk = $_POST['produk'];
-            $jumlah = $_POST['jumlah'];
-
-            if ($produk == 'TV') {
-                $harga = $jumlah * 4200000;
-            } elseif ($produk == 'KULKAS') {
-                $harga = $jumlah * 3100000;
-            } elseif ($produk == 'MESIN CUCI') {
-                $harga = $jumlah * 3800000;
-            } 
-            
-            echo '<br/>Nama Customer : ' .$nama_customer;
-            echo '<br/>Produk Pilihan : ' .$produk;
-            echo '<br/>Jumlah Beli : ' .$jumlah;
-            $format = number_format($harga,0,",",".");
-            echo '<br/>Total Belanja : Rp. ' .$format;
-        ?>
-    </div>
-
 </body>
 
 </html>
